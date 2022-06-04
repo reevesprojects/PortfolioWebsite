@@ -1,0 +1,157 @@
+    html {
+        overflow: -moz-scrollbars-vertical;
+        overflow-y: scroll;
+        /*This (and line below) makes the scrollbar ALWAYS appear*/
+        min-height: 101%;
+    }
+    
+    body {
+        background-color: rgb(54, 59, 80);
+        margin: 0%;
+        margin-top: 10%;
+        /*prevents going behind navbar*/
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    #content {
+        margin-left: 1em;
+        margin-right: 1em;
+        visibility: visible;
+        -webkit-transition: 1s ease-in-out;
+        -moz-transition: 1s ease-in-out;
+        -ms-transition: 1s ease-in-out;
+        -o-transition: 1s ease-in-out;
+        transition: 1s ease-in-out;
+    }
+    
+    #content.translate {
+        margin-left: 1em;
+        visibility: hidden;
+        -webkit-transition: 1s ease-in-out;
+        -moz-transition: 1s ease-in-out;
+        -ms-transition: 1s ease-in-out;
+        -o-transition: 1s ease-in-out;
+        transition: 1s ease-in-out;
+    }
+    /* Page Transition */
+    
+    .top-layer {
+        position: absolute;
+        width: 100%;
+        height: 150%;
+        top: -150%;
+        background: #6c567b;
+        -webkit-transition: 3s ease-in-out;
+        -moz-transition: 3s ease-in-out;
+        -ms-transition: 3s ease-in-out;
+        -o-transition: 3s ease-in-out;
+        transition: 3s ease-in-out;
+    }
+    
+    .top-layer.vertTranslate {
+        position: absolute;
+        width: 100%;
+        height: 150%;
+        top: 250%;
+        background: #6c567b;
+        -webkit-transition: 3s ease-in-out;
+        -moz-transition: 3s ease-in-out;
+        -ms-transition: 3s ease-in-out;
+        -o-transition: 3s ease-in-out;
+        transition: 3s ease-in-out;
+    }
+    /* Navigation Bar*/
+    
+    #navbar {
+        overflow: hidden;
+        backdrop-filter: blur(20px);
+        position: fixed;
+        top: 0%;
+        width: 100%;
+    }
+    
+    #navbar button {
+        float: right;
+        display: block;
+        color: gray;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        padding: 30px 45px;
+        text-decoration: none;
+        background: none;
+        border: none;
+        outline: none;
+        -webkit-transition: .12s ease-in;
+        -moz-transition: .12s ease-in;
+        -ms-transition: .12s ease-in;
+        -o-transition: .12s ease-in;
+        transition: .12s ease-in;
+    }
+    
+    #navbar button:hover {
+        color: rgb(105, 116, 158);
+        -webkit-transition: .12s ease-in;
+        -moz-transition: .12s ease-in;
+        -ms-transition: .12s ease-in;
+        -o-transition: .12s ease-in;
+        transition: .12s ease-in;
+    }
+    
+    #navbar button.active {
+        color: rgb(255, 255, 255);
+    }
+    
+    #navbar button.main {
+        float: left;
+    }
+    /*Scroll Bar*/
+    
+     ::-webkit-scrollbar {
+        width: 1em;
+    }
+    
+     ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: rgb(28, 31, 43);
+    }
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background: rgb(40, 44, 59);
+    }
+    
+    .letter {
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        margin: 26px auto 0;
+        max-width: 550px;
+        min-height: 300px;
+        padding: 24px;
+        position: relative;
+        width: 80%;
+    }
+    
+    .letter:before,
+    .letter:after {
+        content: "";
+        height: 98%;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+    }
+    
+    .letter:before {
+        background: #fafafa;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        left: -5px;
+        top: 4px;
+        transform: rotate(-2.5deg);
+    }
+    
+    .letter:after {
+        background: #f6f6f6;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+        right: -3px;
+        top: 1px;
+        transform: rotate(1.4deg);
+    }
